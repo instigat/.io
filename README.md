@@ -1,4 +1,4 @@
-permalink: /404.html
+permalink: instigat.io/404.html
 <!DOCTYPE html>
 <html>
 <body>
