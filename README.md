@@ -1,4 +1,4 @@
-[permalink:](https://github.com/instigat/-.git)
+[PermaLink](https://github.com/instigat/-.git)
 <!DOCTYPE html>
 <html>
 <body>
