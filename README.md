@@ -1,8 +1,9 @@
+[Home]https://github.com/instigat/-[Shop]https://ebay.com[Donate]https://paypal.com
 <!DOCTYPE html>
 <html>
 <body>
 
-<h1>[Home]https://github.com/instigat/-</h1><h1>[Shop]https://ebay.com</h1><h1>[Donate]https://paypal.com</h1> 
+<h1></h1> 
 
 <p></p>
 
