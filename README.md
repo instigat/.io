@@ -1,4 +1,4 @@
-[Hello](https://github.com/instigat/-.git)
+[Hello](https://github.com/instigat/-)
 <!DOCTYPE html>
 <html>
 <body>
