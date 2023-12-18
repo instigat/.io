@@ -1,8 +1,9 @@
+[Home]https://github.com/instigat/-
 <!DOCTYPE html>
 <html>
 <body>
 
-<h1> [Home]https://github.com/instigat/- </h1>
+<h1></h1>
 
 <p></p>
 
