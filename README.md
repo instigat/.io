@@ -1,4 +1,4 @@
-permalink: instigat.io/404.html
+permalink: instigat.io/README.md
 <!DOCTYPE html>
 <html>
 <body>
