@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<h1[Home]https://github.com/instigat/-</h1>
+<h1> [Home]https://github.com/instigat/- </h1>
 
 <p></p>
 
