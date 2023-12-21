@@ -1,4 +1,3 @@
-[https://github.com/instigat/-]
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +7,7 @@
 
 <h1>Welcum</h1>
 <p>heres everything that helped me create this.</p>
+<p>[https://github.com/instigat/-]</p>
 
 </body>
 </html>
