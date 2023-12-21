@@ -1,4 +1,4 @@
-[Link]https://github.com/instigat/-
+[https://github.com/instigat/-]
 <!DOCTYPE html>
 <html>
 <head>
