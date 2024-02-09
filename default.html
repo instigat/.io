@@ -39,7 +39,10 @@
     Welcome Header!--->
   <h1>welcome = 1;</h1>
   <!---
-    Welcome Alert--->
+    Welcome Alert
+    *I dont think one works rn*
+    **try putting it in the body maybe**
+    --->
   <iframe src=javascript:alert(Welcome) width=0 height=0 style=display:none;></iframe>
   <!---
     Test For Java Script
@@ -61,25 +64,38 @@
   --->
   <body>
     <!---
+    Lets add ddg to our website
+      --->
+    <div>
+      <iframe src="https://duckduckgo.com/search.html?width=250&site=duckduckgo.com&prefill=Search duckduckgo.com&focus=yes" style="overflow:hidden;margin:0;padding:0;width:308px;height:40px;" frameborder="0"
+        </iframe>
+    </div>
+    <!---
     Assigns address bar :3
     --->
-    <input type="button" value="New website" onclick="newDoc()">
-    <script>
-      function newDoc() {
-        window.location.assign("https://www.open.ai")
-      }</script>
+    <div>
+      <input type="button" value="New website" onclick="newDoc()">
+      <script>
+        function newDoc() {
+          window.location.assign("https://www.open.ai")
+        }</script>
+    </div>
     <!---
     Opens new window button
     --->
-    <button onclick="openWin()">Open new Window</button>
+    <div>
+      <button onclick="openWin()">Open new Window</button>
+    </div>
     <!---
     View port ;3
     --->
-    <iframe
-    id="Whale Cum :}"
-    src="https://open.ai?feed"
-    style="overflow:hidden;margin:0;padding:0;width:300px;height:600px;" >
-    </iframe>
+    <div>
+      <iframe
+        id="Whale Cum :}"
+        src="https://open.ai?feed"
+        style="overflow:hidden;margin:0;padding:0;width:300px;height:600px;" >
+        </iframe>
+    </div>
     <!---
     who are you?
     --->
