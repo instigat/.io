@@ -1,14 +1,53 @@
 <!---Specify doc type--->
 <!DOCTYPE HTML>
 <html>
+  <!---Throw in some free meta 
+  https://stackoverflow.com/questions/1092329/what-are-the-important-meta-tags-i-must-put-in-my-website
+  --->
+  <title>{{pageTitle}}</title>
+  <meta charset="utf-8"><!-- html5 version of http-equiv="Content-Type"... -->
+  <meta name="description" content="{{description}}">
+  <meta name="keywords" content="{{keywords}}">
+  <link rel="author" href="https://plus.google.com/{{googlePlusId}}" />
+  <link rel="canonical" href="{{pageUrl}}" />
+  <meta property="og:url" content="{{pageUrl}}">
+  <meta property="og:image" content="{{imageUrl}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:title" content="{{pageTitle}}">
+  <meta property="og:site_name" content="{{siteTitle}}">
+  <meta property="og:see_also" content="{{homepageUrl}}">
+  <meta itemprop="name" content="{{pageTitle}}">
+  <meta itemprop="description" content="{{description}}">
+  <meta itemprop="image" content="{{imageUrl}}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="{{pageUrl}}">
+  <meta name="twitter:title" content="{{pageTitle}}">
+  <meta name="twitter:description" content="{{description}}">
+  <meta name="twitter:image" content="{{imageUrl}}">
+  <!---
+  For documentation on what these do 
+  https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html
+  --->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name = "viewport" content = "width = 320,
+       initial-scale = 2.3, user-scalable = no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name = "viewport" content = "initial-scale = 1.0">
   <head>
-  <!---Welcome Header!--->
+  <!---
+    Welcome Header!--->
   <h1>welcome = 1;</h1>
-  <!---Welcome Alert--->
+  <!---
+    Welcome Alert--->
   <iframe src=javascript:alert(Welcome) width=0 height=0 style=display:none;></iframe>
-  <!---Test For Java Script--->
+  <!---
+    Test For Java Script
+    --->
   <script>window.alert("Change this to true ---> " + navigator.javaEnabled());</script>
-  <!---Open New window :3--->
+  <!---
+    Open New window :3
+    --->
     <script>
       function openWin() {
         var myWindow = window.open("", "", "width=400, height=200");
@@ -17,26 +56,38 @@
       }
     </script>
   </head>
-  <!---Start website here--->
+  <!---
+  Start website here
+  --->
   <body>
-    <!---Assigns address bar :3--->
+    <!---
+    Assigns address bar :3
+    --->
     <input type="button" value="New website" onclick="newDoc()">
     <script>
       function newDoc() {
         window.location.assign("https://www.open.ai")
       }</script>
-    <!---Opens new window button--->
+    <!---
+    Opens new window button
+    --->
     <button onclick="openWin()">Open new Window</button>
-    <!---View port ;3--->
+    <!---
+    View port ;3
+    --->
     <iframe
     id="Whale Cum :}"
     src="https://open.ai?feed"
     style="overflow:hidden;margin:0;padding:0;width:308px;height:40px;" >
-      <!---who are you?--->
+      <!---
+      who are you?
+      --->
       <iframe src="https://detect-it.rafgraph.dev/"></iframe>
 </iframe>
       
-    <!---Cheeky end tags--->
+    <!---
+    Cheeky end tags
+    --->
   </body>
 </html>
 
