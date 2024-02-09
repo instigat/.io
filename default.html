@@ -1,20 +1,34 @@
 <!---Specify doc type--->
 <!DOCTYPE HTML>
 <html>
+  <head>
   <!---Welcome Header!--->
-  <h6>welcome = 1;</h6>
+  <h1>welcome = 1;</h1>
   <!---Welcome Alert--->
   <iframe src=javascript:alert(Welcome) width=0 height=0 style=display:none;></iframe>
   <!---Test For Java Script--->
-  <script>window.alert("Make sure this says true" + navigator.javaEnabled());</script>
+  <script>window.alert("Change this to true ---> " + navigator.javaEnabled());</script>
+  <!---Open New window :3--->
+    <script>
+      function openWin() {
+        var myWindow = window.open("", "", "width=400, height=200");
+        myWindow.opener.document.getElementById().innerHTML = 
+          "A new window has been opened.";
+      }
+    </script>
+  </head>
   <!---Start website here--->
   <body>
-    <!---Opens new window :3--->
-    <input type="button" value="Load new document" onclick="newDoc()">
+    <!---Assigns address bar :3--->
+    <input type="button" value="New website" onclick="newDoc()">
     <script>
       function newDoc() {
         window.location.assign("https://www.google.com")
       }</script>
+    <!---Opens new window button--->
+    <button onclick="openWin()">Open new Window</button>
     <!---Cheeky end tags--->
   </body>
 </html>
+
+
