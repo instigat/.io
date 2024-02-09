@@ -81,7 +81,7 @@ Project Link: [https://github.com/instigat/instigat.github.io](https://github.co
 [license-url]: https://choosealicense.com/licenses/mit
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/instigat
-[product-screenshot]: /images/projects/instigat.jpg
+[product-screenshot]: /images/instigat.jpg
 
 <!DOCTYPE html>
 <html>
