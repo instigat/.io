@@ -7,7 +7,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/instigat/instigat.github.io">
-    <img src="/images/instigat.png" alt="Logo" width="80" height="80">
+    <img src="/images/instigat.jpg" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">instigat.github.io</h3>
