@@ -1,125 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>{{pageTitle}}</title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="styles.css">
-  <meta name="description" content="{{description}}">
-  <meta name="keywords" content="{{keywords}}">
-  <link rel="author" href="https://plus.google.com/{{Instigat}}" />
-  <link rel="canonical" href="{{pageUrl}}" />
-  <meta property="og:url" content="{{pageUrl}}">
-  <meta property="og:image" content="{{imageUrl}}">
-  <meta property="og:description" content="{{description}}">
-  <meta property="og:title" content="{{pageTitle}}">
-  <meta property="og:site_name" content="{{siteTitle}}">
-  <meta property="og:see_also" content="{{homepageUrl}}">
-  <meta itemprop="name" content="{{pageTitle}}">
-  <meta itemprop="description" content="{{description}}">
-  <meta itemprop="image" content="{{imageUrl}}">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:url" content="{{pageUrl}}">
-  <meta name="twitter:title" content="{{pageTitle}}">
-  <meta name="twitter:description" content="{{description}}">
-  <meta name="twitter:image" content="{{imageUrl}}">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="format-detection" content="telephone=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash Verification</title>
 </head>
 <body>
-  <h1>welcome = 1;</h1>
-  <script>
-    window.alert("Change this to true ---> " + navigator.javaEnabled());
-    function openWin() {
-      var myWindow = window.open("", "", "width=400, height=200");
-      myWindow.opener.document.getElementById().innerHTML = 
-        "A new window has been opened.";
-    }
-  </script>
-  <div>
-    <iframe src="https://duckduckgo.com/search.html?width=250&site=search&prefill=Search duckduckgo.com&focus=yes" style="overflow:hidden;margin:0;padding:0;width:308px;height:40px;" frameborder="0"></iframe>
-  </div>
-  <div>
-    <input type="button" value="New website" onclick="newDoc()">
+    <form id="hashForm">
+        <label for="hashInput">Enter Hash:</label>
+        <input type="text" id="hashInput" name="hashInput">
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="resultContainer" style="display: none;">
+        <!-- Website content will be displayed here -->
+    </div>
+
     <script>
-      function newDoc() {
-        window.location.assign("https://www.github.com/instigat")
-      }
+        document.getElementById("hashForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+            const inputHash = document.getElementById("hashInput").value.trim();
+            const expectedHash = "569ec6135d377e8ac326be2be2fd4cd8f3538fc3c23f33a89e81a4ed83671b7e";
+
+            if (inputHash === expectedHash) {
+                // If the entered hash matches the expected hash, display website content
+                document.getElementById("resultContainer").style.display = "block";
+                displayWebsiteContent();
+            } else {
+                // If the entered hash doesn't match, display an error message
+                alert("Incorrect hash value.");
+            }
+        });
+
+        function displayWebsiteContent() {
+            // Dynamically create and display the website content here
+            const websiteContent = `
+                <!---Specify doc type--->
+                <!DOCTYPE HTML>
+                <html>
+                    <!---Throw in some free meta--->
+                    <head>
+                        <title>{{pageTitle}}</title>
+                        <!-- html5 version of http-equiv="Content-Type"... -->
+                        <meta charset="utf-8">
+                        <link rel="stylesheet" href="styles.css"> <!---Lets add some style tygpt--->
+                        <meta name="description" content="{{description}}">
+                        <meta name="keywords" content="{{keywords}}">
+                        <link rel="author" href="https://plus.google.com/{{Instigat}}" />
+                        <link rel="canonical" href="{{pageUrl}}" />
+                        <meta property="og:url" content="{{pageUrl}}">
+                        <meta property="og:image" content="{{imageUrl}}">
+                        <meta property="og:description" content="{{description}}">
+                        <meta property="og:title" content="{{pageTitle}}">
+                        <meta property="og:site_name" content="{{siteTitle}}">
+                        <meta property="og:see_also" content="{{homepageUrl}}">
+                        <meta itemprop="name" content="{{pageTitle}}">
+                        <meta itemprop="description" content="{{description}}">
+                        <meta itemprop="image" content="{{imageUrl}}">
+                        <meta name="twitter:card" content="summary">
+                        <meta name="twitter:url" content="{{pageUrl}}">
+                        <meta name="twitter:title" content="{{pageTitle}}">
+                        <meta name="twitter:description" content="{{description}}">
+                        <meta name="twitter:image" content="{{imageUrl}}">
+                        <!---
+                        For documentation on what these do 
+                        https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html
+                        --->
+                        <meta name="apple-mobile-web-app-capable" content="yes">
+                        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+                        <meta name = "viewport" content = "width = 320, initial-scale = 2.3, user-scalable = no">
+                        <meta name="format-detection" content="telephone=no">
+                        <meta name = "viewport" content = "initial-scale = 1.0">
+                    </head>
+                    <!--- Start website here --->
+                    <body>
+                        <!--- Welcome Header!--->
+                        <h1>welcome = 1;</h1>
+                        <!--- Test For Java Script --->
+                        <script>window.alert("Change this to true ---> " + navigator.javaEnabled());</script>
+                        <!--- Open New window :3 --->
+                        <script>
+                            function openWin() {
+                                var myWindow = window.open("", "", "width=400, height=200");
+                                myWindow.opener.document.getElementById().innerHTML = 
+                                    "A new window has been opened.";
+                            }
+                        </script>
+                        <div>
+                            <iframe src="https://duckduckgo.com/search.html?width=250&site=search&prefill=Search duckduckgo.com&focus=yes" style="overflow:hidden;margin:0;padding:0;width:308px;height:40px;" frameborder="0"></iframe>
+                        </div>
+                        <div>
+                            <input type="button" value="New website" onclick="newDoc()">
+                            <script>
+                                function newDoc() {
+                                    window.location.assign("https://www.github.com/instigat")
+                                }
+                            </script>
+                        </div>
+                        <div>
+                            <button onclick="openWin()">Open new Window</button>
+                        </div>
+                        <div id="main_block">
+                            <iframe name="iframe1" id="iframe1" src="https://openai.com?feed" style="border-style: none;width: 100%; height: 600px;"></iframe>
+                            <iframe name="iframe2" id="iframe2" src="https://www.bing.com/search?q=" style="border-style: none;width: 100%; height: 600px;"></iframe>
+                            <iframe name="iframe3" id="iframe3" src="https://instigat.github.io/default.html" style="border-style: none;width: 100%; height: 600px;"></iframe>
+                        </div>
+                    </body>
+                </html>
+            `;
+
+            // Display the website content in the result container
+            document.getElementById("resultContainer").innerHTML = websiteContent;
+        }
     </script>
-  </div>
-  <div>
-    <button onclick="openWin()">Open new Window</button>
-  </div>
-  <div id="main_block">
-    <iframe name="iframe1" id="iframe1" src="https://openai.com?feed" style="border-style: none;width: 100%; height: 600px;"></iframe>
-    <iframe name="iframe2" id="iframe2" src="https://www.bing.com/search?q=" style="border-style: none;width: 100%; height: 600px;"></iframe>
-    <iframe name="iframe3" id="iframe3" src="https://instigat.github.io/default.html" style="border-style: none;width: 100%; height: 600px;"></iframe>
-  </div>
 </body>
 </html>
-
-<script>
-function executeCode() {
-  document.write(`<!DOCTYPE html>
-<html>
-<head>
-  <title>${{pageTitle}}</title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="styles.css">
-  <meta name="description" content="${{description}}">
-  <meta name="keywords" content="${{keywords}}">
-  <link rel="author" href="https://plus.google.com/${{Instigat}}" />
-  <link rel="canonical" href="${{pageUrl}}" />
-  <meta property="og:url" content="${{pageUrl}}">
-  <meta property="og:image" content="${{imageUrl}}">
-  <meta property="og:description" content="${{description}}">
-  <meta property="og:title" content="${{pageTitle}}">
-  <meta property="og:site_name" content="${{siteTitle}}">
-  <meta property="og:see_also" content="${{homepageUrl}}">
-  <meta itemprop="name" content="${{pageTitle}}">
-  <meta itemprop="description" content="${{description}}">
-  <meta itemprop="image" content="${{imageUrl}}">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:url" content="${{pageUrl}}">
-  <meta name="twitter:title" content="${{pageTitle}}">
-  <meta name="twitter:description" content="${{description}}">
-  <meta name="twitter:image" content="${{imageUrl}}">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="format-detection" content="telephone=no">
-</head>
-<body>
-  <h1>welcome = 1;</h1>
-  <script>
-    window.alert("Change this to true ---> " + navigator.javaEnabled());
-    function openWin() {
-      var myWindow = window.open("", "", "width=400, height=200");
-      myWindow.opener.document.getElementById().innerHTML = 
-        "A new window has been opened.";
-    }
-  </script>
-  <div>
-    <iframe src="https://duckduckgo.com/search.html?width=250&site=search&prefill=Search duckduckgo.com&focus=yes" style="overflow:hidden;margin:0;padding:0;width:308px;height:40px;" frameborder="0"></iframe>
-  </div>
-  <div>
-    <input type="button" value="New website" onclick="newDoc()">
-    <script>
-      function newDoc() {
-        window.location.assign("https://www.github.com/instigat")
-      }
-    </script>
-  </div>
-  <div>
-    <button onclick="openWin()">Open new Window</button>
-  </div>
-  <div id="main_block">
-    <iframe name="iframe1" id="iframe1" src="https://openai.com?feed" style="border-style: none;width: 100%; height: 600px;"></iframe>
-    <iframe name="iframe2" id="iframe2" src="https://www.bing.com/search?q=" style="border-style: none;width: 100%; height: 600px;"></iframe>
-    <iframe name="iframe3" id="iframe3" src="https://instigat.github.io/default.html" style="border-style: none;width: 100%; height: 600px;"></iframe>
-  </div>
-</body>
-</html>`);
-}
-</script>
