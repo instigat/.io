@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hash Verification</title>
+</head>
+<body>
+<script>
+// Define the mapping of letters to values
+const letterMapping = {
+    'A': {'english': 'JP', 'chinese': '一個蘋果'}, 
+    'B': {'english': 'Banana', 'chinese': '香蕉'}, 
+    'C': {'english': 'Cat', 'chinese': '貓'}, 
+    'D': {'english': 'Dog', 'chinese': '狗'}, 
+    'E': {'english': 'Elephant', 'chinese': '大象'},
+    'F': {'english': 'Fish', 'chinese': '魚'}, 
+    'G': {'english': 'Giraffe', 'chinese': '長頸鹿'}, 
+    'H': {'english': 'Horse', 'chinese': '馬'}, 
+    'I': {'english': 'Igloo', 'chinese': '冰屋'}, 
+    'J': {'english': 'Jaguar', 'chinese': '捷豹'},
+    'K': {'english': 'Kangaroo', 'chinese': '袋鼠'}, 
+    'L': {'english': 'Lion', 'chinese': '獅子'}, 
+    'M': {'english': 'Monkey', 'chinese': '猴子'}, 
+    'N': {'english': 'Narwhal', 'chinese': '獨角鯨'}, 
+    'O': {'english': 'Octopus', 'chinese': '章魚'},
+    'P': {'english': 'Penguin', 'chinese': '企鵝'}, 
+    'Q': {'english': 'Queen', 'chinese': '皇后'}, 
+    'R': {'english': 'Rabbit', 'chinese': '兔子'}, 
+    'S': {'english': 'Snake', 'chinese': '蛇'}, 
+    'T': {'english': 'Tiger', 'chinese': '老虎'},
+    'U': {'english': 'Umbrella', 'chinese': '傘'}, 
+    'V': {'english': 'Vase', 'chinese': '花瓶'}, 
+    'W': {'english': 'Whale', 'chinese': '鯨魚'}, 
+    'X': {'english': 'Xylophone', 'chinese': '木琴'}, 
+    'Y': {'english': 'Yak', 'chinese': '犛牛'}, 
+    'Z': {'english': 'Zebra', 'chinese': '斑馬'}
+};
+
+function encodeWord(word, language='english') {
+    let encodedWord = "";
+    for (let letter of word.toUpperCase()) {
+        if (letter in letterMapping) {
+            encodedWord += letterMapping[letter][language] + "-";
+        }
+    }
+    return encodedWord.slice(0, -1);  // Remove the last hyphen
+}
+
+function generateHash(data) {
+    return CryptoJS.SHA256(data).toString(CryptoJS.enc.Hex);
+}
+
+function encodeAndHashWord(word, language='english') {
+    const encodedWord = encodeWord(word, language);
+    return generateHash(encodedWord);
+}
+
+function executeCode() {
+    // Add your code here that you want to execute
+    console.log("Code executed successfully.");
+    window.alert("Welcome:3")
+  
+}
+
+function verifyHash() {
+    const expectedHash = prompt("Enter the hash value:");
+    
+    // Encode and hash the word "a"
+    const hashedValue = encodeAndHashWord("a");
+    
+    // Check if the generated hash matches the expected hash
+    if (hashedValue === expectedHash) {
+        executeCode();
+    } else {
+        alert("Incorrect hash value.");
+    }
+}
+
+verifyHash(); // Automatically run the verification process
+</script>
+</body>
+</html>
