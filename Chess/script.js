@@ -1,26 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const board = document.getElementById('board');
-    const pieces = ['rook', 'knight', 'bishop', 'queen', 'king', 'bishop', 'knight', 'rook'];
-
-    // Mapping of piece types to image URLs for both white and black pieces
-    const pieceImages = {
-        white: {
-            pawn: 'images/white_pawn.png',
-            rook: 'images/white_rook.png',
-            knight: 'images/white_knight.png',
-            bishop: 'images/white_bishop.png',
-            queen: 'images/white_queen.png',
-            king: 'images/white_king.png'
-        },
-        black: {
-            pawn: 'images/black_pawn.png',
-            rook: 'images/black_rook.png',
-            knight: 'images/black_knight.png',
-            bishop: 'images/black_bishop.png',
-            queen: 'images/black_queen.png',
-            king: 'images/black_king.png'
-        }
-    };
+    const pieces = ['♖', '♘', '♗', '♕', '♔', '♗', '♘', '♖']; // Unicode characters for chess pieces
 
     // Create the chessboard
     function createBoard() {
@@ -28,9 +8,14 @@ document.addEventListener('DOMContentLoaded', function() {
             for (let j = 0; j < 8; j++) {
                 const cell = document.createElement('div');
                 cell.classList.add('cell');
-                if ((i + j) % 2 === 1) {
+
+                // Alternate the background color based on the row and column index
+                if ((i + j) % 2 === 0) {
+                    cell.classList.add('white');
+                } else {
                     cell.classList.add('black');
                 }
+
                 board.appendChild(cell);
             }
         }
@@ -39,25 +24,25 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add pieces to the board
     function addPieces() {
         for (let i = 0; i < 8; i++) {
-            const pawn = createPiece('pawn', 'white');
+            const pawn = createPiece('♙'); // White pawn
             board.children[i + 8].appendChild(pawn);
 
-            const piece = createPiece(pieces[i], 'white');
+            const piece = createPiece(pieces[i]); // White piece
             board.children[i].appendChild(piece);
 
-            const blackPawn = createPiece('pawn', 'black');
+            const blackPawn = createPiece('♟'); // Black pawn
             board.children[6 * 8 + i].appendChild(blackPawn);
 
-            const blackPiece = createPiece(pieces[i], 'black');
+            const blackPiece = createPiece(pieces[i].toLowerCase()); // Black piece
             board.children[7 * 8 + i].appendChild(blackPiece);
         }
     }
 
-    // Create a piece element with appropriate background image
-    function createPiece(pieceType, color) {
+    // Create a piece element with appropriate content (emoji)
+    function createPiece(pieceContent) {
         const piece = document.createElement('div');
         piece.classList.add('piece');
-        piece.style.backgroundImage = `url('${pieceImages[color][pieceType]}')`;
+        piece.textContent = pieceContent; // Use emoji as text content
         return piece;
     }
 
