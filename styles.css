@@ -1,61 +1,6 @@
-/* Body styles */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  margin: 0;
-  padding: 0;
-}
-
-/* Header styles */
-h1 {
-  color: #333;
-  text-align: center;
-  margin-top: 20px;
-}
-
-/* Button styles */
-button, input[type="button"] {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 10px;
-}
-
-button:hover, input[type="button"]:hover {
-  background-color: #0056b3;
-}
-
-/* iFrame styles */
-iframe {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin: 10px auto;
-  display: block;
-}
-
-/* Container styles */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Footer styles */
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -75,26 +20,31 @@ a:hover {
 #header {
     background-color: #333;
     color: white;
-    padding: 10px 0;
+    padding: 15px 0;
     text-align: center;
 }
 
 #header .logo {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
     color: white;
 }
 
 #header nav a {
     color: white;
-    margin: 0 15px;
-    font-size: 18px;
+    margin: 0 20px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+#header nav a:hover {
+    color: #FFD700;
 }
 
 /* Navigation Menu */
 #menu {
     background-color: #444;
-    padding: 10px 0;
+    padding: 15px 0;
     text-align: center;
 }
 
@@ -111,8 +61,9 @@ a:hover {
 
 #menu .links a {
     color: white;
-    padding: 10px 15px;
+    padding: 15px 20px;
     display: inline-block;
+    transition: background-color 0.3s ease;
 }
 
 #menu .links a:hover {
@@ -124,7 +75,7 @@ a:hover {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
+    min-width: 180px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     text-align: left;
@@ -134,10 +85,11 @@ a:hover {
     color: black;
     padding: 12px 16px;
     display: block;
+    transition: background-color 0.3s ease;
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: #ddd;
 }
 
 .dropdown:hover .dropdown-content {
@@ -146,9 +98,9 @@ a:hover {
 
 /* Banner */
 #banner {
-    background-color: #007BFF;
+    background: linear-gradient(135deg, #007BFF 0%, #00C6FF 100%);
     color: white;
-    padding: 50px 0;
+    padding: 60px 0;
     text-align: center;
 }
 
@@ -159,37 +111,51 @@ a:hover {
 
 #banner h1 {
     margin: 0;
-    font-size: 48px;
+    font-size: 50px;
+    font-weight: 700;
 }
 
 #banner p {
-    font-size: 24px;
+    font-size: 26px;
+    font-weight: 300;
 }
 
 /* Main Content */
 h1 {
     text-align: center;
     cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+h1:hover {
+    color: #007BFF;
 }
 
 p {
     max-width: 800px;
     margin: 20px auto;
     line-height: 1.6;
+    text-align: center;
 }
 
 p a {
     word-break: break-all;
+    color: #007BFF;
+}
+
+p a:hover {
+    color: #0056b3;
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
     #header .logo {
-        font-size: 20px;
+        font-size: 24px;
     }
 
     #header nav a {
-        font-size: 16px;
+        font-size: 18px;
+        margin: 0 10px;
     }
 
     #banner h1 {
@@ -205,6 +171,6 @@ p a {
     }
 
     .dropdown-content {
-        min-width: 120px;
+        min-width: 150px;
     }
 }
